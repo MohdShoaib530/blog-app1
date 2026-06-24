@@ -1,35 +1,14 @@
 <script lang="ts">
-	export let title = 'My Blog';
-	export let subtitle = 'A simple Svelte blog app';
+  import { Camera, HomeIcon } from '@lucide/svelte';
 </script>
 
-<header class="site-header">
-	<div class="header-content">
-		<h1>{title}</h1>
-		<p>{subtitle}</p>
+<header class="header flex flex-row items-center justify-between">
+	
+	<div class="actions flex flex-col">
+		<HomeIcon size={20} />
 	</div>
+	<nav>
+	  <a href="/">Home</a>
+	  <a href="/blog">Blog</a>
+	</nav>
 </header>
-
-<style>
-	.site-header {
-		padding: 1.5rem;
-		background: #0d1117;
-		color: white;
-		border-bottom: 1px solid #30363d;
-	}
-
-	.header-content {
-		max-width: 960px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		margin: 0;
-		font-size: 2rem;
-	}
-
-	p {
-		margin: 0.5rem 0 0;
-		color: #8b949e;
-	}
-</style>
